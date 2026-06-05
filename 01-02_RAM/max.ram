@@ -1,0 +1,22 @@
+read 0
+sub =1
+store 1
+read 2
+
+loop:
+read 3
+load 2
+sub 3
+
+jgtz ok
+load 3
+store 2
+
+ok:
+load 1
+sub =1
+store 1
+
+jgtz loop
+write 2
+halt

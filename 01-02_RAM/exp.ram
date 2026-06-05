@@ -1,0 +1,27 @@
+read 0
+jz zero
+
+sub =1
+store 1
+load =2
+store 2
+load 1
+
+ok:
+jz end
+
+load 2
+mul =2
+store 2
+load 1
+sub =1
+store 1
+jmp ok
+
+end:
+write 2
+halt
+
+zero:
+write =1
+halt
